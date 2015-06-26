@@ -20,8 +20,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages={"sample.jsp","sample.jsp.controllers",
+		"sample.jsp.services", "sample.jsp.domain", "sample.jsp.config"})
 public class SampleWebJspApplication extends SpringBootServletInitializer {
 
 	@Override
