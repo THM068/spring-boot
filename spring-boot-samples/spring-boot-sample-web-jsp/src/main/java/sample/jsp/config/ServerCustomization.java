@@ -19,6 +19,8 @@ public class ServerCustomization  extends ServerProperties {
         ErrorPage error500 = new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/jsp/500.jsp");
         container.addErrorPages(error500);
 
+        ErrorPage error405 = new ErrorPage(HttpStatus.METHOD_NOT_ALLOWED,"/jsp/error.jsp");
+        container.addErrorPages(error405);
         container.addErrorPages(new ErrorPage("/jsp/error.jsp"));
 
     }

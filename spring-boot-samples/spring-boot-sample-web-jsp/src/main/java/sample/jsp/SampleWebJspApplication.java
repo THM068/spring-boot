@@ -24,7 +24,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages={"sample.jsp","sample.jsp.controllers",
-		"sample.jsp.services", "sample.jsp.domain", "sample.jsp.config"})
+		"sample.jsp.services", "sample.jsp.domain", "sample.jsp.config", "sample.jsp.validators"})
 public class SampleWebJspApplication extends SpringBootServletInitializer {
 
 	@Override
