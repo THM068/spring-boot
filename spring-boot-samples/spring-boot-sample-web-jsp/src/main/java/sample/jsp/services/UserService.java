@@ -25,7 +25,8 @@ public class UserService {
         return userList;
     }
 
-    public void save(User user){
+    public User save(User user){
         System.out.println("User has been saved");
+        return user;
     }
 }

@@ -54,7 +54,7 @@ public class UserController {
     @RequestMapping(value = "user_create.html", params = "new")
     public ModelAndView create() {
         UserCreateForm form = new UserCreateForm();
-        ModelAndView mv = new ModelAndView("userCreate", "form", form);
+        ModelAndView mv = new ModelAndView("userCreate","form", form);
         return mv;
     }
 

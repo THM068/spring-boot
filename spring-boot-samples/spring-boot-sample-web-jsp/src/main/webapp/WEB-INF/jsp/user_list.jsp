@@ -11,6 +11,7 @@
 <html lang="en">
 <head>
     <title>User List</title>
+    <jsp:include page="_cssTemplate.jsp" />
 </head>
 <body>
   <h1><spring:message code="user.list"/> </h1>

@@ -11,6 +11,7 @@
 <html>
 <head>
     <title>Create a User</title>
+    <jsp:include page="_cssTemplate.jsp" />
 </head>
 <body>
     <h1><spring:message code="user.create" /> </h1>

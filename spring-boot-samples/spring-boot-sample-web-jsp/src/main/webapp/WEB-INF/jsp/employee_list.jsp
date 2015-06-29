@@ -13,6 +13,7 @@
 <html>
 <head>
     <title>Employee List</title>
+    <jsp:include page="_cssTemplate.jsp" />
 </head>
 <body>
   <h3><spring:message code="employee.list.title" /> </h3>

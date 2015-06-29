@@ -12,6 +12,7 @@
 <html>
 <head>
     <title>Create Employee</title>
+    <jsp:include page="_cssTemplate.jsp" />
 </head>
 <body>
   <h3><spring:message code="employee.header.message"/></h3>
