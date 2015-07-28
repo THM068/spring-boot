@@ -3,6 +3,7 @@ package sample.jsp.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.MultiValueMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
@@ -20,6 +21,7 @@ import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by thandomafela on 28/06/15.
@@ -49,7 +51,14 @@ public class EmployeeController {
     }
 
     @RequestMapping(value = "create_emp.html", method = RequestMethod.GET)
-    public ModelAndView create() {
+    public ModelAndView create(@CookieValue("JSESSIONID") String cookie, @RequestHeader MultiValueMap<String,String> headers ) {
+        System.out.println(String.format("The cookie value is %s", cookie));
+        Set<String> keys = headers.keySet();
+
+        for(String key: keys) {
+            System.out.println(String.format(" %s : %s", key, headers.getFirst(key)));
+        }
+
         ModelAndView mv = new ModelAndView("create_emp");
         return mv;
     }
